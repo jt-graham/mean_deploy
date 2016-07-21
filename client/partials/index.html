@@ -1,0 +1,29 @@
+
+<div ng-controller="newController">
+	<h1>List of Friends</h1>
+	<div class='col-md-9'>
+	<table class='table table-striped'>
+		<thead class='thead'>
+			<tr>
+				<th>Name</th>
+				<th>Birthday</th>
+				<th>Show</th>
+				<th>Update</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody class=''>
+			<tr ng-repeat='friend in friends | filter: filter_name'>
+				<td>{{friend.first_name}} {{friend.last_name}}</td>
+				<td>{{friend.birthday | date: 'MMM dd, yyyy'}}</td>
+				<td><a href="#/show/{{friend._id}}">show</a></td>
+				<td><a href="#/edit/{{friend._id}}">edit</a></td>
+				<td><button ng-click='delete(friend)' class='btn btn-danger'>Delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<div class='col-md-2'>
+	<input type='text' ng-model="filter_name" placeholder='Filter:' class='form-control'>
+	</div>
+</div>

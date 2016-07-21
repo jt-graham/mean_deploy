@@ -1,0 +1,23 @@
+<div ng-controller='showController as SC'>
+	<div class='col-md-6'>
+		<h2>{{SC.friend.first_name}}'s Information</h2>
+		<table class='table table-hover'>
+			<tr>
+				<td>{{SC.friend.first_name}}</td>
+				<td> First Name </td>
+			</tr>
+			<tr>
+				<td>{{SC.friend.last_name}}</td>
+				<td> Last Name </td>
+			</tr>
+			<tr>
+				<td>{{SC.friend.birthday | date:'MMM dd, yyyy'}}</td>
+				<td> Birthday </td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+	
+	<script src='angular/angular.js'></script>
+	<script src='angular-route/angular-route.js'></script>
+	<script type="text/javascript">
+		var myApp = angular.module('myApp', ['ngRoute']);
+	</script>
+	<script type="text/javascript" src='./assets/app.js'></script>
+	<script type="text/javascript" src='./assets/controllers/newController.js'></script>
+	<script type="text/javascript" src='./assets/controllers/editController.js'></script>
+	<script type="text/javascript" src='./assets/controllers/showController.js'></script>
+	<script type="text/javascript" src='./assets/factories/friendsFactory.js'></script>
+</head>
+<body ng-app='myApp'>
+	<nav class="navbar navbar-default">
+		<a href="#/" class="navbar-brand col-md-offset-2">Index</a>
+		<a href="#/new" class="navbar-brand">New</a>
+	</nav>
+	<div class='container'>
+		<div ng-view=''>
+		</div>
+	</div>
+</body>
+</html>

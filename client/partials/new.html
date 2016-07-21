@@ -1,0 +1,23 @@
+<div ng-controller="newController">
+	<h2>Add A New Friend</h2>
+	<form ng-submit='create(newFriend)' class='col-md-5'>
+		<table class='table table-hover '>
+			<tr>
+				<td><input type='text' ng-model='newFriend.first_name' placeholder='Enter First Name'></td>
+				<td> First Name </td>
+			</tr>
+			<tr>
+				<td><input type='text' ng-model='newFriend.last_name' placeholder='Enter Last Name'></td>
+				<td> Last Name </td>
+			</tr>
+			<tr>
+				<td><input type='date' ng-model='newFriend.birthday' placeholder='Enter Birthday'></td>
+				<td> Birthday </td>
+			</tr>
+			<tr>
+				<td><input type='submit' value='Create Player' class='btn btn-primary'></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+</div>

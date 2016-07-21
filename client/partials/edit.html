@@ -1,0 +1,26 @@
+<div ng-controller='editController as EC'>
+	<h2>Edit Friend Details</h2>
+	<div class='col-md-5'>
+	<table class='table table-hover'>
+		<tr>
+			<td><input type='text' name="{{EC.friend.first_name}}" ng-model='EC.friend.first_name' placeholder='test{{EC.friend.first_name}}'></td>
+			<td> First Name </td>
+		</tr>
+		<tr>
+			<td><input type='text' name="{{EC.friend.last_name}}" ng-model='EC.friend.last_name' placeholder='{{EC.friend.last_name}}'></td>
+			<td> Last Name </td>
+		</tr>
+		<tr>
+			<td><input type='date' name="{{EC.friend.birthday}}" ng-model="EC.friend.birthday" placeholder='{{EC.friend.birthday}}'></td>
+			<td> Birthday </td>
+		</tr>
+		<tr>
+			<td>current birthday ({{EC.friend.birthday | date:'MMM dd, yyyy'}})</td>
+		</tr>
+		<tr>
+			<td><input type='submit' class='btn btn-primary' ng-click='EC.edit()'></td>
+			<td></td>
+		</tr>
+	</table>
+	</div>
+</div>
